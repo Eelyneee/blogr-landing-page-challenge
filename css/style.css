@@ -16,15 +16,21 @@
 
 section {
   padding: 7% 15%;
+  overflow: hidden;
 }
 
 #top {
   background-image: linear-gradient(to right bottom, #ff8f70, #ff7e66, #ff6c5e, #ff5758, #ff3d54);
   border-radius: 0px 0px 0px 100px;
   text-align: center;
+  position: relative;
 }
 #top a {
   text-decoration: none;
+}
+#top .bg-intro img {
+  width: 300px;
+  height: 200px;
 }
 #top nav {
   display: flex;
@@ -123,15 +129,27 @@ section {
   font-weight: 500;
 }
 #top .btn-white {
-  background-color: white;
+  background-color: var(--White_text);
   color: var(--Light_red_CTA_text);
 }
-#top .btn-white-rev {
+#top .btn-white:hover {
   background-color: var(--Very_light_red_CTA_hover_background);
+  color: var(--White_text);
+}
+#top .btn-white-rev {
+  background-color: none;
   border: 2px solid white;
   color: var(--White_text);
 }
+#top .btn-white-rev:hover {
+  background-color: var(--White_text);
+  color: var(--Light_red_CTA_text);
+}
 
+#second .box {
+  display: flex;
+  flex-direction: row;
+}
 #second h2 {
   font-family: "Overpass", sans-serif;
   font-weight: 600;
@@ -144,16 +162,17 @@ section {
 .card-container {
   display: flex;
   flex-direction: column;
-  width: 60ch;
+  width: 50%;
 }
 
 .card {
+  width: 60ch;
   margin-bottom: 2rem;
 }
 .card p {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
-  color: #b5b5b5;
+  color: var(--Grayish_blue_footer_text);
   font-size: 16px;
   line-height: 2rem;
 }
@@ -176,7 +195,7 @@ section {
   font-family: "Overpass", sans-serif;
   font-weight: 600;
   font-size: 2rem;
-  text-align: center;
+  text-align: left;
   margin-bottom: 3rem;
   color: white;
 }
@@ -216,6 +235,9 @@ footer .blocks li:first-child {
 footer .blocks a {
   text-decoration: none;
   color: var(--Grayish_blue_footer_text);
+}
+footer .blocks a:hover {
+  text-decoration: underline;
 }
 
 /*Attribution*/
