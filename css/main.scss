@@ -20,6 +20,7 @@
 section {
   padding: 7% 15%;
   overflow: hidden;
+  width: 100%;
 }
 
 //section top
@@ -165,6 +166,10 @@ section {
     background-color: var(--White_text);
     color: var(--Light_red_CTA_text);
   }
+
+  .burger {
+    display: none;
+  }
 }
 
 // second
@@ -187,6 +192,7 @@ section {
 .card-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   width: 50%;
 }
 
@@ -269,6 +275,9 @@ footer {
     a:hover {
       text-decoration: underline;
     }
+    p {
+      color: var(--White_text);
+    }
   }
 }
 
@@ -285,4 +294,101 @@ footer {
 }
 .attribution a:hover {
   font-size: 20px;
+}
+
+@media only screen and (max-width: 650px) {
+  section {
+    padding: 5% 7%;
+  }
+  .card-container {
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+  }
+  .card {
+    width: 250px;
+    margin: 0 auto 32px;
+    text-align: center;
+    p {
+      font-size: 0.8rem;
+      line-height: 1.2rem;
+    }
+    h3 {
+      font-size: 1.2em;
+    }
+  }
+
+  #top {
+    nav {
+      flex-direction: row;
+      justify-content: flex-start;
+      .logo {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+      }
+    }
+
+    .nav-links,
+    .login-signup {
+      opacity: 0;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 15px;
+    }
+
+    padding-bottom: 10rem;
+
+    .burger {
+      display: block;
+    }
+  }
+
+  #second {
+    .box {
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  #third {
+    justify-content: center;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    .logo {
+      position: absolute;
+      top: 7%;
+      left: 37%;
+    }
+
+    .blocks {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    li {
+      padding: 0px;
+    }
+
+    .block1 {
+      margin: 150px auto 30px;
+    }
+
+    .block2,
+    .block3 {
+      margin: 30px auto;
+    }
+  }
 }

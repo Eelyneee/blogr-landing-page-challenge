@@ -17,6 +17,7 @@
 section {
   padding: 7% 15%;
   overflow: hidden;
+  width: 100%;
 }
 
 #top {
@@ -145,6 +146,9 @@ section {
   background-color: var(--White_text);
   color: var(--Light_red_CTA_text);
 }
+#top .burger {
+  display: none;
+}
 
 #second .box {
   display: flex;
@@ -162,6 +166,7 @@ section {
 .card-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   width: 50%;
 }
 
@@ -239,6 +244,9 @@ footer .blocks a {
 footer .blocks a:hover {
   text-decoration: underline;
 }
+footer .blocks p {
+  color: var(--White_text);
+}
 
 /*Attribution*/
 .attribution {
@@ -255,6 +263,96 @@ footer .blocks a:hover {
 
 .attribution a:hover {
   font-size: 20px;
+}
+
+@media only screen and (max-width: 650px) {
+  section {
+    padding: 5% 7%;
+  }
+
+  .card-container {
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .card {
+    width: 250px;
+    margin: 0 auto 32px;
+    text-align: center;
+  }
+  .card p {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+  .card h3 {
+    font-size: 1.2em;
+  }
+
+  #top {
+    padding-bottom: 10rem;
+  }
+  #top nav {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  #top nav .logo {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+  }
+  #top .nav-links,
+#top .login-signup {
+    opacity: 0;
+  }
+  #top h1 {
+    font-size: 2rem;
+  }
+  #top p {
+    font-size: 15px;
+  }
+  #top .burger {
+    display: block;
+  }
+
+  #second .box {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  #second h2 {
+    font-size: 1.5rem;
+  }
+
+  #third {
+    justify-content: center;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  footer .logo {
+    position: absolute;
+    top: 7%;
+    left: 37%;
+  }
+  footer .blocks {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  footer li {
+    padding: 0px;
+  }
+  footer .block1 {
+    margin: 150px auto 30px;
+  }
+  footer .block2,
+footer .block3 {
+    margin: 30px auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
