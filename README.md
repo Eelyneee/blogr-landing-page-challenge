@@ -72,7 +72,7 @@ sass --watch ./css/main.scss:./css/style.css
 ### Useful resources
 
 - https://openclassrooms.com/en/courses/5625786-produce-maintainable-css-with-sass/5723751-install-sass-locally - This helped me for clear doubt on install sass and start using sass. 
-- 
+- https://www.geeksforgeeks.org/how-to-override-the-css-properties-of-a-class-using-another-css-class/ - This help me to learn !important in css value to state the property is important.
 
 
 

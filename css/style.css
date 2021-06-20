@@ -1,13 +1,3 @@
-:root {
-  --Light_red_CTA_text: hsl(356, 100%, 66%);
-  --Very_light_red_CTA_hover_background: hsl(355, 100%, 74%);
-  --Very_dark_blue__headings: hsl(208, 49%, 24%);
-  --White_text: hsl(0, 0%, 100%);
-  --Grayish_blue_footer_text: hsl(240, 2%, 79%);
-  --Very_dark_grayish_blue_body_copy-: hsl(207, 13%, 34%);
-  --Very_dark_black_blue__footer_background: hsl(240, 10%, 16%);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -38,8 +28,22 @@ section {
   justify-content: space-around;
   align-content: center;
 }
+#top nav .burger {
+  display: none;
+}
+#top nav .burger div {
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  margin: 5px;
+  border-radius: 10px;
+}
 #top .logo {
   flex-grow: 1;
+}
+#top .frame {
+  display: flex;
+  flex-direction: row;
 }
 #top .nav-links {
   display: flex;
@@ -130,24 +134,21 @@ section {
   font-weight: 500;
 }
 #top .btn-white {
-  background-color: var(--White_text);
-  color: var(--Light_red_CTA_text);
+  background-color: white;
+  color: #ff525d;
 }
 #top .btn-white:hover {
-  background-color: var(--Very_light_red_CTA_hover_background);
-  color: var(--White_text);
+  background-color: #ff7a85;
+  color: white;
 }
 #top .btn-white-rev {
   background-color: none;
   border: 2px solid white;
-  color: var(--White_text);
+  color: white;
 }
 #top .btn-white-rev:hover {
-  background-color: var(--White_text);
-  color: var(--Light_red_CTA_text);
-}
-#top .burger {
-  display: none;
+  background-color: white;
+  color: #ff525d;
 }
 
 #second .box {
@@ -160,7 +161,7 @@ section {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 3rem;
-  color: var(--Very_dark_blue__headings);
+  color: #1f3f5b;
 }
 
 .card-container {
@@ -177,7 +178,7 @@ section {
 .card p {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
-  color: var(--Grayish_blue_footer_text);
+  color: #c8c8cb;
   font-size: 16px;
   line-height: 2rem;
 }
@@ -185,7 +186,7 @@ section {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
-  color: var(--Very_dark_blue__headings);
+  color: #1f3f5b;
   margin-bottom: 2rem;
 }
 
@@ -216,7 +217,7 @@ footer {
   display: flex;
   justify-content: space-around;
   padding: 7% 15%;
-  background-color: var(--Very_dark_black_blue__footer_background);
+  background-color: #25252d;
   border-radius: 0px 100px 0px 0px;
 }
 footer .blocks {
@@ -224,7 +225,7 @@ footer .blocks {
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-  color: var(--Grayish_blue_footer_text);
+  color: #c8c8cb;
   font-family: "Ubuntu", sans-serif;
 }
 footer .blocks ul {
@@ -239,21 +240,21 @@ footer .blocks li:first-child {
 }
 footer .blocks a {
   text-decoration: none;
-  color: var(--Grayish_blue_footer_text);
+  color: #c8c8cb;
 }
 footer .blocks a:hover {
   text-decoration: underline;
 }
 footer .blocks p {
-  color: var(--White_text);
+  color: white;
 }
 
 /*Attribution*/
 .attribution {
   font-size: 15px;
-  color: var(--White_text);
+  color: white;
   text-align: center;
-  background-color: var(--Very_dark_black_blue__footer_background);
+  background-color: #25252d;
 }
 
 .attribution a {
@@ -289,30 +290,71 @@ footer .blocks p {
     font-size: 1.2em;
   }
 
-  #top {
-    padding-bottom: 10rem;
-  }
   #top nav {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
   }
-  #top nav .logo {
+  #top nav .logo img {
     position: absolute;
-    top: 10%;
-    left: 5%;
+    left: 10%;
   }
-  #top .nav-links,
-#top .login-signup {
-    opacity: 0;
+  #top nav .burger {
+    display: block;
+    cursor: pointer;
+  }
+  #top nav .frame-actives {
+    transform: translateX(0%) !important;
+  }
+  #top nav .frame {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    position: absolute;
+    left: 10%;
+    z-index: 2;
+    width: 85%;
+    margin: 16% 0% 0%;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+  #top nav .frame .nav-links {
+    flex-direction: column;
+    background-color: white;
+    width: 85%;
+  }
+  #top nav .frame .nav-links li {
+    margin: 20px 100px;
+  }
+  #top nav .frame .nav-links a {
+    color: #4b5862;
+    font-size: 13px;
+    border-radius: 50px;
+  }
+  #top nav .frame .nav-links a:hover {
+    font-size: 12px;
+  }
+  #top nav .frame .login-signup {
+    flex-direction: column;
+    background-color: white;
+    width: 85%;
+  }
+  #top nav .frame .login-signup a {
+    font-size: 13px;
+    margin: 20px auto;
+  }
+  #top nav .frame .login-signup a:nth-of-type(1) {
+    color: #4b5862;
+    border-radius: 50px;
+  }
+  #top nav .frame .login-signup a:nth-of-type(2) {
+    background-color: #ff7a85;
+    color: white;
   }
   #top h1 {
     font-size: 2rem;
   }
   #top p {
     font-size: 15px;
-  }
-  #top .burger {
-    display: block;
   }
 
   #second .box {
